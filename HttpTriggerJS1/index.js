@@ -1,41 +1,27 @@
+const createHandler = require("azure-function-express").createHandler;
 const express = require('express');
 const bodyParser = require('body-parser');
 const documentClient = require("documentdb").DocumentClient;
-const connectionString = process.env["restapicosmosdb_DOCUMENTDB"];
+const connectionString = "AccountEndpoint=https://cosmosdbtimer.documents.azure.com:443/;AccountKey=dpLkjXTKaUN1ATEzX0j8CIzntU4JYObuVe6ZDZdFQ0hScMajJKFg6wOSZQyIIPCfm3A3JHXv5SlXEP2K9Ted0Q==;"
 const arr = connectionString.split(';');
 const endpoint = arr[0].split('=')[1];
 const primaryKey = arr[1].split('=')[1] + "==";
 const collectionUrl = 'dbs/tasks/colls/users';
 const client = new documentClient(endpoint, { "masterKey": primaryKey });
 const app = express();
-const router = express.router();
-module.exports = function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
-
-    router.get('/', function(req, res){
+//const router = express.Router();
+app.get('/users', function(context, req, res){
         const allResults = queryCollection();
+        context.log("Hello");
         allResults.toArray((err, results) => {
             if (err)throw err;
             //console.log(results);
-            context.res.status(200).json({"AllItems": results});
+           // context.log("HI");
+           // context.log(results);
+            res.json({"AllItems": results});
             
         })
     });
-
-    /*if (req.query.name || (req.body && req.body.name)) {
-        context.res = {
-            // status: 200, /* Defaults to 200 */
-    /*        body: "Hello " + (req.query.name || req.body.name)
-        };
-    }
-    else {
-        context.res = {
-            status: 400,
-            body: "Please pass a name on the query string or in the request body"
-        };
-    } */
-    context.done(null, context.res);
-};
 
 function queryCollection(){
     const result = client.queryDocuments(
@@ -45,3 +31,5 @@ function queryCollection(){
     );
     return result;
 }
+
+module.exports = createHandler(app);

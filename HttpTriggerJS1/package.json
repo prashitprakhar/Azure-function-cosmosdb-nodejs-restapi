@@ -18,6 +18,7 @@
   "homepage": "https://github.com/prashitprakhar/Azure-function-cosmosdb-nodejs-restapi#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "documentdb": "^1.14.2",
     "express": "^4.16.2"
   }
 }

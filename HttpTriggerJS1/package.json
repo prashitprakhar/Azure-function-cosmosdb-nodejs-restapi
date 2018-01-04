@@ -1,0 +1,23 @@
+{
+  "name": "azure-function-cosmosdb-nodejs-restapi",
+  "version": "1.0.0",
+  "description": "AZURE Function CosmosDB Nodejs RESTAPI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashitprakhar/Azure-function-cosmosdb-nodejs-restapi.git"
+  },
+  "author": "Prashit Prakhar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prashitprakhar/Azure-function-cosmosdb-nodejs-restapi/issues"
+  },
+  "homepage": "https://github.com/prashitprakhar/Azure-function-cosmosdb-nodejs-restapi#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}

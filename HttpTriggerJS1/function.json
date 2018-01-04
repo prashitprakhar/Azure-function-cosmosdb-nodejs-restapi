@@ -1,0 +1,32 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "methods": [
+        "get",
+        "post",
+        "put",
+        "patch",
+        "delete"
+      ],
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "tasks",
+      "collectionName": "users",
+      "createIfNotExists": true,
+      "connection": "restapicosmosdb_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

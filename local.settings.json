@@ -1,0 +1,15 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_EXTENSION_VERSION": "~1",
+    "ScmType": "None",
+    "WEBSITE_AUTH_ENABLED": "False",
+    "AzureWebJobsDashboard": "DefaultEndpointsProtocol=https;AccountName=restapicosmosdb883a;AccountKey=mYJg0S7WP+iQcHJnL8yc4cVb+JDhpeK/aA0WQOheJgFtf63Hi4zJF4kR28mxsxJ05shrX0CsRpZ/NochD8LfBQ==",
+    "WEBSITE_NODE_DEFAULT_VERSION": "6.5.0",
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "DefaultEndpointsProtocol=https;AccountName=restapicosmosdb883a;AccountKey=mYJg0S7WP+iQcHJnL8yc4cVb+JDhpeK/aA0WQOheJgFtf63Hi4zJF4kR28mxsxJ05shrX0CsRpZ/NochD8LfBQ==",
+    "WEBSITE_CONTENTSHARE": "restapicosmosdbapp883a",
+    "WEBSITE_SITE_NAME": "restapicosmosdbapp",
+    "WEBSITE_SLOT_NAME": "Production",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=restapicosmosdb883a;AccountKey=mYJg0S7WP+iQcHJnL8yc4cVb+JDhpeK/aA0WQOheJgFtf63Hi4zJF4kR28mxsxJ05shrX0CsRpZ/NochD8LfBQ=="
+  }
+}
